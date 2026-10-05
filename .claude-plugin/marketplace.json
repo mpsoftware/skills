@@ -1,0 +1,17 @@
+{
+  "name": "mpsoftware",
+  "owner": {
+    "name": "mpsoftware",
+    "url": "https://github.com/mpsoftware"
+  },
+  "description": "mpsoftware's agent skills as an installable Claude Code plugin.",
+  "plugins": [
+    {
+      "name": "mpsoftware-skills",
+      "source": "./",
+      "description": "Agent skills from mpsoftware: prove, evidence for every pull request.",
+      "category": "engineering",
+      "keywords": ["skills", "pull-request", "evidence"]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Example Shop: checkout</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; }
+    body { font: 15px/1.4 system-ui, sans-serif; background: #f6f7f9; color: #1c2230; }
+    header { height: 56px; display: flex; align-items: center; padding: 0 32px; background: #fff; border-bottom: 1px solid #e3e6eb; font-weight: 700; }
+    main { display: flex; gap: 24px; padding: 32px; }
+    .card { background: #fff; border: 1px solid #e3e6eb; border-radius: 12px; padding: 20px; }
+    form { flex: 3; display: grid; gap: 12px; }
+    label { display: grid; gap: 4px; font-size: 13px; color: #5b6474; }
+    input { height: 38px; border: 1px solid #cfd4dc; border-radius: 8px; padding: 0 10px; font: inherit; }
+    aside { flex: 2; }
+    .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed #e3e6eb; }
+    .total { font-weight: 700; border: 0; }
+    button { height: 44px; border: 0; border-radius: 10px; background: #4f46e5; color: #fff; font: inherit; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>Example Shop</header>
+  <main id="checkout">
+    <form class="card" onsubmit="event.preventDefault(); confirmOrder()">
+      <h1>Checkout</h1>
+      <label>Name <input name="name" value="Jane Doe"></label>
+      <label>Email <input name="email" value="jane@example.com"></label>
+      <label>Address <input name="address" value="1 Example Street, Springfield"></label>
+      <button type="submit">Place order</button>
+    </form>
+    <aside class="card" id="summary">
+      <strong>Order summary</strong>
+      <div class="row"><span>Notebook, A5</span><span>$12.00</span></div>
+      <div class="row"><span>Pencil set</span><span>$6.50</span></div>
+      <div class="row total"><span>Total</span><span>$18.50</span></div>
+    </aside>
+  </main>
+  <script>
+    // `?variant=old` renders the state before the change: no order summary.
+    if (new URLSearchParams(location.search).get('variant') === 'old') document.getElementById('summary').remove()
+    function confirmOrder() {
+      document.getElementById('checkout').innerHTML = '<div class="card"><h1>Thank you</h1><p>Order number EX-1001</p></div>'
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+node_modules/
+.prove/
+.env*
+*.tgz
+.DS_Store

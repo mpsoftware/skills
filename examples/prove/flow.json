@@ -1,0 +1,12 @@
+{
+  "name": "example checkout",
+  "viewport": { "width": 1024, "height": 640 },
+  "steps": [
+    { "goto": "/index.html" },
+    { "waitFor": "text=Place order" },
+    { "checkpoint": "checkout" },
+    { "click": "text=Place order" },
+    { "waitFor": "role=heading[name=\"Thank you\"]" },
+    { "checkpoint": "confirmation" }
+  ]
+}

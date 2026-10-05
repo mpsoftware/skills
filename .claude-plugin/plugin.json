@@ -1,0 +1,13 @@
+{
+  "name": "mpsoftware-skills",
+  "version": "0.1.0",
+  "description": "Agent skills from mpsoftware: prove, evidence for every pull request.",
+  "author": {
+    "name": "mpsoftware",
+    "url": "https://github.com/mpsoftware"
+  },
+  "repository": "https://github.com/mpsoftware/skills",
+  "license": "MIT",
+  "keywords": ["skills", "pull-request", "evidence", "screenshots", "code-review"],
+  "skills": ["./skills/prove"]
+}

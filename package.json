@@ -1,0 +1,17 @@
+{
+  "name": "mpsoftware-skills",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Development tooling for the skills in this repository; the skills themselves have no dependencies.",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test 'skills/*/scripts/*.test.mjs'",
+    "example:prove": "node examples/prove/run.mjs"
+  },
+  "devDependencies": {
+    "pixelmatch": "7.2.0",
+    "playwright": "1.63.0",
+    "pngjs": "7.0.0"
+  }
+}
