@@ -72,7 +72,8 @@ A change that spans several kinds needs evidence for every claim it makes.
    ```
 
    `report.mjs` writes `verdict.json` and a text-only `evidence.md`, and exits
-   non-zero unless every criterion passes.
+   non-zero unless every criterion passes and has a readable screenshot in the
+   evidence directory. A capture with a failed step never passes.
 
 ### No intended visible change
 
